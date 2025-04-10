@@ -3,14 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaProducer.Api", "KafkaProducer.Api\KafkaProducer.Api.csproj", "{02DFA70A-4848-437A-BD3B-1395BCB6690F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaConsumer.Worker", "KafkaConsumer.Worker\KafkaConsumer.Worker.csproj", "{4612E1CE-81F2-47F4-B066-6235E9E7DF39}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBridge.Messaging.KafkaProducer", "DBridge.Messaging.KafkaProducer\DBridge.Messaging.KafkaProducer.csproj", "{B40D49E1-066E-48A3-B62A-11A4460AAB86}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBridge.Messaging.KafkaConsumer", "DBridge.Messaging.KafkaConsumer\DBridge.Messaging.KafkaConsumer.csproj", "{BF1897A8-26DD-4D7E-9FBF-0FB221E042E2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{75671C55-3D6E-432C-A641-0F6EAAA4D30D}"
 	ProjectSection(SolutionItems) = preProject
 		..\.gitignore = ..\.gitignore
@@ -18,28 +10,36 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{75671C55-3
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBridge.Messaging.KafkaConsumer", "src\DBridge.Messaging.KafkaConsumer\DBridge.Messaging.KafkaConsumer.csproj", "{EC75A9C3-0BD3-496A-9760-A3A670E9F51B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBridge.Messaging.KafkaProducer", "src\DBridge.Messaging.KafkaProducer\DBridge.Messaging.KafkaProducer.csproj", "{2BFE978A-A5A3-4304-8D7D-DBF1BF8113C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaConsumer.Worker", "src\KafkaConsumer.Worker\KafkaConsumer.Worker.csproj", "{06CF7FB1-4244-46FE-AE33-CD488D544C7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaProducer.Api", "src\KafkaProducer.Api\KafkaProducer.Api.csproj", "{8AB4B888-9086-40D6-BCBA-ECD6F505BAD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{02DFA70A-4848-437A-BD3B-1395BCB6690F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02DFA70A-4848-437A-BD3B-1395BCB6690F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02DFA70A-4848-437A-BD3B-1395BCB6690F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02DFA70A-4848-437A-BD3B-1395BCB6690F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4612E1CE-81F2-47F4-B066-6235E9E7DF39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4612E1CE-81F2-47F4-B066-6235E9E7DF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4612E1CE-81F2-47F4-B066-6235E9E7DF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4612E1CE-81F2-47F4-B066-6235E9E7DF39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B40D49E1-066E-48A3-B62A-11A4460AAB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B40D49E1-066E-48A3-B62A-11A4460AAB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B40D49E1-066E-48A3-B62A-11A4460AAB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B40D49E1-066E-48A3-B62A-11A4460AAB86}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF1897A8-26DD-4D7E-9FBF-0FB221E042E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF1897A8-26DD-4D7E-9FBF-0FB221E042E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF1897A8-26DD-4D7E-9FBF-0FB221E042E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF1897A8-26DD-4D7E-9FBF-0FB221E042E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC75A9C3-0BD3-496A-9760-A3A670E9F51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC75A9C3-0BD3-496A-9760-A3A670E9F51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC75A9C3-0BD3-496A-9760-A3A670E9F51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC75A9C3-0BD3-496A-9760-A3A670E9F51B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BFE978A-A5A3-4304-8D7D-DBF1BF8113C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BFE978A-A5A3-4304-8D7D-DBF1BF8113C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BFE978A-A5A3-4304-8D7D-DBF1BF8113C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BFE978A-A5A3-4304-8D7D-DBF1BF8113C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06CF7FB1-4244-46FE-AE33-CD488D544C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CF7FB1-4244-46FE-AE33-CD488D544C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CF7FB1-4244-46FE-AE33-CD488D544C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CF7FB1-4244-46FE-AE33-CD488D544C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB4B888-9086-40D6-BCBA-ECD6F505BAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB4B888-9086-40D6-BCBA-ECD6F505BAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB4B888-9086-40D6-BCBA-ECD6F505BAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB4B888-9086-40D6-BCBA-ECD6F505BAD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
